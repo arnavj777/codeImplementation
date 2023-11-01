@@ -1,6 +1,6 @@
 package codeImplementation;
 
-public class main {
+public class Runner {
 	
 	
 }

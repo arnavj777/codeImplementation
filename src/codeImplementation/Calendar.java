@@ -1,10 +1,10 @@
 package codeImplementation;
 import javax.swing.*;
 
-public class window {
+public class Calendar {
 	
     JFrame frame;
-    window(){
+    Calendar(){
     frame=new JFrame("first way");
     JButton button = new JButton("let's see");
     button.setBounds(200, 150, 90, 50);
@@ -24,7 +24,7 @@ public class window {
 
 	public static void main(String[] args)
 	{
-	    new window();
+	    new Calendar();
 	}
 }
 
