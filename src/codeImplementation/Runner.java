@@ -1,5 +1,7 @@
 package codeImplementation;
 
+import java.util.Scanner;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -50,13 +52,15 @@ public class Runner {
 			}
 		}
 
-		public void login(String userName, String password)
+		public void login()
 		{
+		Scanner scan = new Scanner(System.in);
 		System.out.println("Login:   What is your username?");
+			String userName = scan.next();
 			if(userName == this.userName)
 			{	
 				System.out.println("What is your password?");
-
+				String password = scan.next();
 				boolean loggedIn = false;
 				int count = 0;
 				while(!loggedIn) {
@@ -86,6 +90,7 @@ public class Runner {
 
 	public static void main(String[] args)
 	{
-	    
+	    Runner user = new Runner();
+	    user.login();
 	}
 }
