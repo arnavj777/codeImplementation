@@ -1,6 +1,5 @@
 package codeImplementation;
 
-<<<<<<< HEAD
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -22,9 +21,6 @@ public class Runner {
     // makes the frame visible
     frame.setVisible(true);
     }
-
-=======
-public class Runner {	
 		// Initialize variables for the class itself
 		String name;
 		String userName;
@@ -87,7 +83,7 @@ public class Runner {
 		public static void Main(String[] args) {
 			
 		}
->>>>>>> 811886c22fd92b95eec9400a8c78a3c515f45cab
+
 	
 
 
