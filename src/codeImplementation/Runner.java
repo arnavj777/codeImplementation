@@ -1,6 +1,5 @@
 package codeImplementation;
 
-<<<<<<< HEAD
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -22,9 +21,6 @@ public class Runner {
     // makes the frame visible
     frame.setVisible(true);
     }
-
-=======
-public class Runner {	
 		// Initialize variables for the class itself
 		String name;
 		String userName;
@@ -56,18 +52,22 @@ public class Runner {
 
 		public void login(String userName, String password)
 		{
+		System.out.println("Login:   What is your username?");
 			if(userName == this.userName)
 			{	
+				System.out.println("What is your password?");
+
 				boolean loggedIn = false;
 				int count = 0;
 				while(!loggedIn) {
+					
 					if(password.equals(this.password))
 					{
 						System.out.println("Logged in");
 					}
 					else
 					{
-						System.out.println("Password in correct");
+						System.out.println("Password incorrect");
 						count++;
 						if(count > 3)
 							{
@@ -83,16 +83,9 @@ public class Runner {
 			}
 		
 		}
-		
-		public static void Main(String[] args) {
-			
-		}
->>>>>>> 811886c22fd92b95eec9400a8c78a3c515f45cab
-	
-
 
 	public static void main(String[] args)
 	{
-	    new Runner();
+	    
 	}
 }
