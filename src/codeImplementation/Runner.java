@@ -57,7 +57,7 @@ public class Runner {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Login:   What is your username?");
 			String userName = scan.next();
-			if(userName == this.userName)
+			if(userName.equals(this.userName))
 			{	
 				System.out.println("What is your password?");
 				String password = scan.next();
@@ -68,6 +68,7 @@ public class Runner {
 					if(password.equals(this.password))
 					{
 						System.out.println("Logged in");
+						loggedIn = true;
 					}
 					else
 					{
@@ -85,12 +86,26 @@ public class Runner {
 			{
 				System.out.println("This username does not exist");
 			}
+			scan.close();
 		
 		}
 
 	public static void main(String[] args)
 	{
-	    Runner user = new Runner();
-	    user.login();
+	    Runner user = new Runner("Billy", "bill5", "ducks", new double[] {2.3, 4.5}, false, 150.7);
+	   // user.login();
+	    
+	    Scanner scan = new Scanner(System.in);
+	    boolean run = true;
+	    while(run) {
+	    	System.out.println("What data would you like to view (enter quit to stop program).");
+	    	String line = scan.next();
+	    	if(line.equals("quit")) {
+	    		run = false;
+	    	}
+	    
+	    }
+	    
+	    scan.close();
 	}
 }
