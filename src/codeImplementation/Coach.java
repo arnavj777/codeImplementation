@@ -13,16 +13,18 @@ public class Coach extends Runner{
 		}
 	}
 
-	public double updateRunnerGoal(String runnerName, Timestamp spec, Double milesGoal)
+	public void updateRunnerGoal(String runnerName, Timestamp spec, Double milesGoal)
 	{
-		Runner thisRunner;
 		for(Runner run : assignedRunners) {
-			if(run.getName().equals(runnerName))
-			thisRunner = run;
+			if(run.getName().equals(runnerName)) {
+				Runner thisRunner = run;
+				thisRunner.setGoalMiles(milesGoal);
+			}
+			
 		}
 		
-		thisRunner.setGoalMiles(milesGoal);
-		//Runner.getRunner(runnerName).Calendar.updateNotes(spec, "Updated Goal");
+		
+		//Runner.getRunner(runnerName).Calendar.updateNotes(spec, "Updated Goal"); 
 		
 	}
 
