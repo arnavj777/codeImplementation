@@ -15,6 +15,7 @@ public class Runner {
 	double weight;
     JFrame frame;
     Calendar calendar;
+    double goalMiles;
     
     Runner(){
     frame=new JFrame("first way");
@@ -35,7 +36,7 @@ public class Runner {
 		
 		// Construct the Runner object
 		public Runner(String name, String userName, String password,
-	double[] location, Boolean hasWatch, double weight, Calendar c)
+	double[] location, Boolean hasWatch, double weight, Calendar c, double goalMiles)
 		{
 			this.name = name;
 			this.userName = userName;
@@ -95,7 +96,7 @@ public class Runner {
 
 	public static void main(String[] args)
 	{
-	    Runner user = new Runner("Billy", "bill5", "ducks", new double[] {2.3, 4.5}, false, 150.7, new Calendar());
+	    Runner user = new Runner("Billy", "bill5", "ducks", new double[] {2.3, 4.5}, false, 150.7, new Calendar(), 15);
 	   // user.login();
 	    
 	    Scanner scan = new Scanner(System.in);
@@ -116,7 +117,6 @@ public class Runner {
 	    		
 	    	}
 	    	else if(line.toLowerCase().equals("average miles run") || line.equals("3")) {
-	
 	    	}
 	    	else {
 	    		System.out.println("That was not an option, please enter a choice or quit to exit the program");
@@ -129,5 +129,9 @@ public class Runner {
 	
 	public String getName() {
 		return name;
+	}
+	
+	public void setGoalMiles(double miles) {
+		goalMiles = miles;
 	}
 }
