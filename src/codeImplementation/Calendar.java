@@ -1,5 +1,6 @@
 package codeImplementation;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -13,14 +14,29 @@ public class Calendar {
 	
 	Map<Date,Stats> stats;
 	Map<LocalDateTime, String> notes;
+	
+	Stats stat1;
+	Stats stat2;
+	Stats stat3;
+	Stats stat4;
+	Stats stat5;
+	
+	
 		
 	
     Iterator StatsIterator = stats.entrySet().iterator();
 
 	
 	public Calendar() {
+		
+		DateTimeFormatter formatter
+        = DateTimeFormatter.ofPattern(
+            "yyyy-MM-dd");
+		
 		stats = new HashMap<Date, Stats>();
 		notes = new HashMap<LocalDateTime, String>();
+		
+		stats.put(2023-03-11, stat1);
 	}
 	
 	public double calcAvgMileRan(LocalDateTime initalDate, LocalDateTime finalDate) {
