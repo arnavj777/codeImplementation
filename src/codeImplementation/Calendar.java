@@ -16,16 +16,56 @@ public class Calendar {
 	// set up stats examples
 	
 	
-	Map<Date,Stats> Stats = new HashMap<Date, Stats>();
+	Map<Date,Stats> stats = new HashMap<Date, Stats>();
 	Map<LocalDateTime, String> notes = new HashMap<LocalDateTime, String>();
 		
 	
-    Iterator StatsIterator = Stats.entrySet().iterator();
+    Iterator StatsIterator = stats.entrySet().iterator();
 
 	
 	
-	// calcAvgMileGoal() ----> calcAvgMileRan
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	
 	public double calcAvgMileRan(LocalDateTime initalDate, LocalDateTime finalDate) {
+		double y = 0;
+		boolean x = true;
+		boolean z = false;
+		int count = 0;
+		while (StatsIterator.hasNext() && x ) {
+			 
+	        Map.Entry mapElement
+	            = (Map.Entry)StatsIterator.next();
+	        
+	        if(mapElement.equals( initalDate)) {
+	        	z = true;
+	        }
+	        if(z) {
+	        y = y + (int)mapElement.getValue();
+	        }
+	        if(mapElement.equals( finalDate)) {
+	        	z = false;
+	        }
+	        count++;
+	        
+	        
+	    }
+		return (y/count);
+		
+	}
+	
+	public double calcTotalMilesRan(LocalDateTime initalDate, LocalDateTime finalDate) {
 		double y = 0;
 		boolean x = true;
 		boolean z = false;
@@ -40,7 +80,9 @@ public class Calendar {
 	        if(z) {
 	        y = y + (int)mapElement.getValue();
 	        }
-	        if()
+	        if(mapElement.equals( finalDate)) {
+	        	z = false;
+	        }
 	        
 	    }
 		return y;
@@ -50,6 +92,6 @@ public class Calendar {
 	
 	
  
-}}
+}
 
 
