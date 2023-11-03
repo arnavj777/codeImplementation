@@ -1,5 +1,6 @@
 package codeImplementation;
-import java.time.LocalDateTime;
+
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -7,33 +8,42 @@ import java.util.Map;
 
 import javax.swing.*;
 
-public class Calendar {
+public class RunnerCalendar {
 	// set up stats examples
 	
 	
-	Map<Date,Stats> stats = new HashMap<Date, Stats>();
-	Map<LocalDateTime, String> notes = new HashMap<LocalDateTime, String>();
+	Map<Date,Stats> stats;
+	Map<Date , String> notes;
+	
+	Stats stat1;
+	Stats stat2;
+	Stats stat3;
+	Stats stat4;
+	Stats stat5;
+	
+	
 		
 	
     Iterator StatsIterator = stats.entrySet().iterator();
 
 	
+	@SuppressWarnings("deprecation")
+	public RunnerCalendar() {
+		
+		
+		
+		stats = new HashMap<Date , Stats>();
+		notes = new HashMap<Date , String>();
+		
+		@SuppressWarnings("deprecation")
+		Date date1 = new Date(2023, 11, 03);
+		Date date2 = new Date(2023, 11, 03);
+
+		
+		stats.put(date1, stat1);
+	}
 	
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-	
-	public double calcAvgMileRan(LocalDateTime initalDate, LocalDateTime finalDate) {
+	public double calcAvgMileRan(Date  initalDate, Date  finalDate) {
 		double y = 0;
 		boolean x = true;
 		boolean z = false;
@@ -60,7 +70,7 @@ public class Calendar {
 		
 	}
 	
-	public double calcTotalMilesRan(LocalDateTime initalDate, LocalDateTime finalDate) {
+	public double calcTotalMilesRan(Date  initalDate, Date  finalDate) {
 		double y = 0;
 		boolean x = true;
 		boolean z = false;

@@ -10,7 +10,7 @@ public class Runner {
 	String name;
 	String userName;
 	String password;
-	double[] location = new double[2];
+	double[] location;
 	Boolean hasWatch;
 	double weight;
     JFrame frame;
@@ -44,7 +44,8 @@ public class Runner {
 			this.hasWatch = hasWatch;
 			this.weight = weight;
 			calendar = c;
-
+			
+			location = new double[2];
 			if(hasWatch)
 			{
 				this.location = location;
