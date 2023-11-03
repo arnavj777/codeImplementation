@@ -8,19 +8,6 @@ import java.util.Map;
 import javax.swing.*;
 
 public class Calendar {
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	String Temperature;
-	String Weather;
-	String runningPath;
-	
 	// set up stats examples
 	
 	
