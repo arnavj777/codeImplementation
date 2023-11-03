@@ -27,6 +27,7 @@ public class RunnerCalendar {
     Iterator StatsIterator = stats.entrySet().iterator();
 
 	
+	@SuppressWarnings("deprecation")
 	public RunnerCalendar() {
 		
 		
@@ -35,9 +36,11 @@ public class RunnerCalendar {
 		notes = new HashMap<Date , String>();
 		
 		@SuppressWarnings("deprecation")
-		Date date = new Date(2014, 02, 11);
+		Date date1 = new Date(2023, 11, 03);
+		Date date2 = new Date(2023, 11, 03);
+
 		
-		stats.put(date, stat1);
+		stats.put(date1, stat1);
 	}
 	
 	public double calcAvgMileRan(Date  initalDate, Date  finalDate) {
