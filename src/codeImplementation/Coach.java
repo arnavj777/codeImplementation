@@ -20,8 +20,9 @@ public class Coach extends Runner{
 			if(run.getName().equals(runnerName))
 			thisRunner = run;
 		}
-		thisRunner.updateMilesGoal(milesGoal);
-		Runner.getRunner(runnerName).Calendar.updateNotes(spec, "Updated Goal");
+		
+		thisRunner.setGoalMiles(milesGoal);
+		//Runner.getRunner(runnerName).Calendar.updateNotes(spec, "Updated Goal");
 		
 	}
 
