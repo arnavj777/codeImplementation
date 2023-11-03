@@ -11,27 +11,17 @@ public class Calendar {
 	// set up stats examples
 	
 	
-	Map<Date,Stats> stats = new HashMap<Date, Stats>();
-	Map<LocalDateTime, String> notes = new HashMap<LocalDateTime, String>();
+	Map<Date,Stats> stats;
+	Map<LocalDateTime, String> notes;
 		
 	
     Iterator StatsIterator = stats.entrySet().iterator();
 
 	
-	
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+	public Calendar() {
+		stats = new HashMap<Date, Stats>();
+		notes = new HashMap<LocalDateTime, String>();
+	}
 	
 	public double calcAvgMileRan(LocalDateTime initalDate, LocalDateTime finalDate) {
 		double y = 0;
