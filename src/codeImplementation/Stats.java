@@ -26,7 +26,10 @@ public class Stats {
 
 	public void viewDaily(LocalDateTime date, double miles)
 	{
-		System.out.println(getStatsForDay(date, miles));
+		if (date.isAfter(LocalDateTime.now())) {
+			if (date.toLocalDate() != LocalDateTime.)
+			System.out.println(getStatsForDay(date, miles));
+		}
 	}
 
 	public void viewMonthly(LocalDateTime date, double miles)
