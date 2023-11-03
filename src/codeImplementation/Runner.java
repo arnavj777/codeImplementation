@@ -7,8 +7,15 @@ import javax.swing.JFrame;
 
 public class Runner {
 	
-
+	String name;
+	String userName;
+	String password;
+	double[] location = new double[2];
+	Boolean hasWatch;
+	double weight;
     JFrame frame;
+    Calendar calendar;
+    
     Runner(){
     frame=new JFrame("first way");
     JButton button = new JButton("let's see");
@@ -24,22 +31,18 @@ public class Runner {
     frame.setVisible(true);
     }
 		// Initialize variables for the class itself
-		String name;
-		String userName;
-		String password;
-		double[] location = new double[2];
-		Boolean hasWatch;
-		double weight;
+		
 		
 		// Construct the Runner object
 		public Runner(String name, String userName, String password,
-	double[] location, Boolean hasWatch, double weight)
+	double[] location, Boolean hasWatch, double weight, Calendar c)
 		{
 			this.name = name;
 			this.userName = userName;
 			this.password = password;
 			this.hasWatch = hasWatch;
 			this.weight = weight;
+			calendar = c;
 
 			if(hasWatch)
 			{
@@ -98,10 +101,16 @@ public class Runner {
 	    Scanner scan = new Scanner(System.in);
 	    boolean run = true;
 	    while(run) {
-	    	System.out.println("What data would you like to view (enter quit to stop program).");
+	    	System.out.println("What data would you like to view? (enter quit to stop program)");
+	    	System.out.println("Total Miles Run (1)");
+	    	System.out.println("Specific Date (2)");
+	    	System.out.println("Average Miles Run (3)");
 	    	String line = scan.next();
 	    	if(line.equals("quit")) {
 	    		run = false;
+	    	}
+	    	if(line.toLowerCase().equals("total miles run") || line.equals("1")) {
+	    		
 	    	}
 	    
 	    }
