@@ -1,6 +1,11 @@
 package codeImplementation;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+
+import javax.swing.*;
+
 
 public class Stats {
 
@@ -10,28 +15,28 @@ public class Stats {
 	static double totalMiles;
 	
 	
-	Stats(Double milesGoal, Double milesRan, Double avgMiles, Double totalMiles)
+	Stats()
 	{
-		this.milesGoal = milesGoal;
-		this.milesRan = milesRan;
-		this.avgMiles = avgMiles;
-		this.totalMiles = totalMiles;
+		milesGoal = 0;
+		milesRan = 0;
+		avgMiles = 0;
+		totalMiles = 0;
 	}
 	
 
-	public double viewDaily(Date date)
+	public void viewDaily(LocalDateTime date, double miles)
 	{
-		System.out.println(getStatsForDay(date));
+		System.out.println(getStatsForDay(date, miles));
 	}
 
-	public double viewMonthly(Date date)
+	public void viewMonthly(LocalDateTime date, double miles)
 	{
-		System.out.println(getStatsForMonth(date));
+		System.out.println(getStatsForMonth(date, miles));
 	}
 
-	public double viewYearly(Date date)
+	public void viewYearly(LocalDateTime date, double miles)
 	{
-		System.out.println(getStatsForYear(date));
+		System.out.println(getStatsForYear(date, miles));
 	}
 	
 	
@@ -39,7 +44,14 @@ public class Stats {
 	
 	// getter & Setters
 	
-	public double getStatsForDay() {
+	public double getStatsForDay(LocalDateTime date, double miles) {
+		
+		return milesRan;
+	}
+	public double getStatsForMonth(LocalDateTime date, double miles) {
+		return milesRan;
+	}
+	public double getStatsForYear(LocalDateTime date, double miles) {
 		return milesRan;
 	}
 
