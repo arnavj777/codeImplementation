@@ -1,5 +1,5 @@
 package codeImplementation;
-import java.time.LocalDateTime;
+import java.time.Date;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ public class Calendar {
 	
 	
 	Map<Date,Stats> stats;
-	Map<LocalDateTime, String> notes;
+	Map<Date , String> notes;
 	
 	Stats stat1;
 	Stats stat2;
@@ -33,13 +33,15 @@ public class Calendar {
         = DateTimeFormatter.ofPattern(
             "yyyy-MM-dd");
 		
-		stats = new HashMap<Date, Stats>();
-		notes = new HashMap<LocalDateTime, String>();
+		stats = new HashMap<Date , Stats>();
+		notes = new HashMap<Date , String>();
 		
-		stats.put(2023-03-11, stat1);
+		Date  date = Date().now();
+		date.format(formatter);
+		stats.put(, stat1);
 	}
 	
-	public double calcAvgMileRan(LocalDateTime initalDate, LocalDateTime finalDate) {
+	public double calcAvgMileRan(Date  initalDate, Date  finalDate) {
 		double y = 0;
 		boolean x = true;
 		boolean z = false;
@@ -66,7 +68,7 @@ public class Calendar {
 		
 	}
 	
-	public double calcTotalMilesRan(LocalDateTime initalDate, LocalDateTime finalDate) {
+	public double calcTotalMilesRan(Date  initalDate, Date  finalDate) {
 		double y = 0;
 		boolean x = true;
 		boolean z = false;
