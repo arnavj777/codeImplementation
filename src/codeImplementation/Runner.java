@@ -116,7 +116,6 @@ public class Runner {
 	    		
 	    	}
 	    	else if(line.toLowerCase().equals("average miles run") || line.equals("3")) {
-	
 	    	}
 	    	else {
 	    		System.out.println("That was not an option, please enter a choice or quit to exit the program");
