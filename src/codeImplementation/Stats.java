@@ -1,6 +1,8 @@
 package codeImplementation;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -24,12 +26,13 @@ public class Stats {
 	}
 	
 
+
 	public void viewDaily(LocalDateTime date, double miles)
 	{
-		if (date.isAfter(LocalDateTime.now())) {
-			if (date.toLocalDate() != LocalDateTime.)
+		if (date.truncatedTo(ChronoUnit.DAYS).isAfter(LocalDateTime.now().truncatedTo(ChronoUnit.DAYS))) {
 			System.out.println(getStatsForDay(date, miles));
 		}
+
 	}
 
 	public void viewMonthly(LocalDateTime date, double miles)
