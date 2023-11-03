@@ -95,7 +95,7 @@ public class Runner {
 
 	public static void main(String[] args)
 	{
-	    Runner user = new Runner("Billy", "bill5", "ducks", new double[] {2.3, 4.5}, false, 150.7);
+	    Runner user = new Runner("Billy", "bill5", "ducks", new double[] {2.3, 4.5}, false, 150.7, new Calendar());
 	   // user.login();
 	    
 	    Scanner scan = new Scanner(System.in);
@@ -109,8 +109,17 @@ public class Runner {
 	    	if(line.equals("quit")) {
 	    		run = false;
 	    	}
-	    	if(line.toLowerCase().equals("total miles run") || line.equals("1")) {
+	    	else if(line.toLowerCase().equals("total miles run") || line.equals("1")) {
 	    		
+	    	}
+	    	else if(line.toLowerCase().equals("specific date") || line.equals("2")) {
+	    		
+	    	}
+	    	else if(line.toLowerCase().equals("average miles run") || line.equals("3")) {
+	
+	    	}
+	    	else {
+	    		System.out.println("That was not an option, please enter a choice or quit to exit the program");
 	    	}
 	    
 	    }
