@@ -9,19 +9,19 @@ import javax.swing.*;
 
 public class Calendar {
 	
-	String Temperature;
-	String Weather;
-	String runningPath;
+	
 	
 	// set up stats examples
-	
-	
-	Map<Date,Stats> Stats = new HashMap<Date, Stats>();
-	Map<LocalDateTime, String> notes = new HashMap<LocalDateTime, String>();
+	Map<Date,Stats> stats;
+	Map<LocalDateTime, String> notes;
 		
 	
-    Iterator StatsIterator = Stats.entrySet().iterator();
-
+    Iterator StatsIterator = stats.entrySet().iterator();
+    
+    public Calendar() {
+    	stats = new HashMap<Date, Stats>();
+    	notes = new HashMap<LocalDateTime, String>();
+    }
 	
 	
 	// calcAvgMileGoal() ----> calcAvgMileRan
@@ -50,6 +50,6 @@ public class Calendar {
 	
 	
  
-}}
+}
 
 
