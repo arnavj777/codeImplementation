@@ -108,4 +108,8 @@ public class Runner {
 	    
 	    scan.close();
 	}
+	
+	public String getName() {
+		return name;
+	}
 }
