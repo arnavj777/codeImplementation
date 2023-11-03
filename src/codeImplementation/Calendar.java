@@ -29,16 +29,15 @@ public class Calendar {
 	
 	public Calendar() {
 		
-		DateTimeFormatter formatter
-        = DateTimeFormatter.ofPattern(
-            "yyyy-MM-dd");
+		
 		
 		stats = new HashMap<Date , Stats>();
 		notes = new HashMap<Date , String>();
 		
-		Date  date = Date().now();
-		date.format(formatter);
-		stats.put(, stat1);
+		@SuppressWarnings("deprecation")
+		Date date = new Date(2014, 02, 11);
+		
+		stats.put(date, stat1);
 	}
 	
 	public double calcAvgMileRan(Date  initalDate, Date  finalDate) {
