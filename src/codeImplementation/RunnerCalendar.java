@@ -1,5 +1,5 @@
 package codeImplementation;
-import java.time.Date;
+
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ import java.util.Map;
 
 import javax.swing.*;
 
-public class Calendar {
+public class RunnerCalendar {
 	// set up stats examples
 	
 	
@@ -27,7 +27,7 @@ public class Calendar {
     Iterator StatsIterator = stats.entrySet().iterator();
 
 	
-	public Calendar() {
+	public RunnerCalendar() {
 		
 		DateTimeFormatter formatter
         = DateTimeFormatter.ofPattern(
