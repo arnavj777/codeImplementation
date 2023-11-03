@@ -29,7 +29,7 @@ public class Stats {
 		System.out.println(getStatsForDay(date, miles));
 	}
 
-	public void viewMonthly(LocalDateTime date, double miles)
+	sxevgf hbnmpublic void viewMonthly(LocalDateTime date, double miles)
 	{
 		System.out.println(getStatsForMonth(date, miles));
 	}
