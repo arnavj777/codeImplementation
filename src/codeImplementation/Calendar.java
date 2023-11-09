@@ -1,14 +1,11 @@
 package codeImplementation;
 
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import javax.swing.*;
-
-public class RunnerCalendar {
+public class Calendar {
 	// set up stats examples
 	
 	
@@ -23,31 +20,34 @@ public class RunnerCalendar {
 	
 	
 		
-	
-    Iterator StatsIterator = stats.entrySet().iterator();
 
 	
 	@SuppressWarnings("deprecation")
-	public RunnerCalendar() {
-		
-		
-		
-		stats = new HashMap<Date , Stats>();
-		notes = new HashMap<Date , String>();
+	 Calendar() {
+
+
+
+		Map<Date,Stats> stat = new HashMap<Date , Stats>();
+		Map<Date , String> note = new HashMap<Date , String>();
 		
 		@SuppressWarnings("deprecation")
 		Date date1 = new Date(2023, 11, 03);
 		Date date2 = new Date(2023, 11, 03);
 
 		
-		stats.put(date1, stat1);
+		stat.put(date1, stat1);
+		stat.put(date2, stat2);
+
 	}
+
 	
 	public double calcAvgMileRan(Date  initalDate, Date  finalDate) {
 		double y = 0;
 		boolean x = true;
 		boolean z = false;
 		int count = 0;
+		Iterator StatsIterator = stats.entrySet().iterator();
+
 		while (StatsIterator.hasNext() && x ) {
 			 
 	        Map.Entry mapElement
@@ -74,6 +74,8 @@ public class RunnerCalendar {
 		double y = 0;
 		boolean x = true;
 		boolean z = false;
+		Iterator StatsIterator = stats.entrySet().iterator();
+
 		while (StatsIterator.hasNext() && x ) {
 			 
 	        Map.Entry mapElement
